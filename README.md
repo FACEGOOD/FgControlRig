@@ -46,4 +46,4 @@ Source code for the plguin is available on this repository for UE5.1,UE5.0.3
 
 
 ## License
-Appach 2.0
+Apache 2.0
