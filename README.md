@@ -43,3 +43,7 @@ Source code for the plguin is available on this repository for UE5.1,UE5.0.3
 ### AnimGraph
 ---
 ![AnimGraph](Resources/Screenshot%202023-01-17%20171244.png)
+
+
+## License
+Appach 2.0
