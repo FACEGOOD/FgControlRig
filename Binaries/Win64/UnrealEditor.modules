@@ -1,7 +1,8 @@
 {
-	"BuildId": "23058290",
+	"BuildId": "25360045",
 	"Modules": 
 	{
-		"FgControlRigLib": "UnrealEditor-FgControlRigLib.dll"
+		"FgControlRig": "UnrealEditor-FgControlRig.dll",
+		"FgControlRigEditor": "UnrealEditor-FgControlRigEditor.dll"
 	}
 }
