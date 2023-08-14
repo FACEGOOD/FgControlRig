@@ -1,33 +1,34 @@
-# FgControlRigLib
-this is a implement of  UE plugin work for  livelink data process and set the data to metahuman controlrig board
+# FgControlRig
+Change the plugin name from FgControlRigLib to FgControlRig
+this is an implementation of  UE plugin work for  LiveLink data process and set the data to the metahuman control rig board
 
 
 ## Compatibility
 ---
-Currently,the plugins has binaries that have been build for UE5.2.x
+Currently, the plugins have binaries that have been build for UE5.2.x
 
-Source code for the plguin is available on this repository for UE5.2.x
+The source code for the plugin is available on this repository for UE5.2.x
 
 ## Build
 ---
 ### Dependences
-- Visual studio 2019 or later
+- Visual Studio 2019 or later
 - UnrealEngine
 
 ### Steps
 ---
 - Download this repository
-- Use the UnrealEngine create c++ project
-- Create "Plugins" folder in your project dirctory
-- Put this repository files in your Plugins dirctory
-- Click the project file named "*.uproject" with right button and choose "Switch UnrealEngine version" to switch the unreal engine version you want to use
-- Click the project file named "*.uproject" with right button and choose "Generate visual studio project files"
-- Double click "projectname.sln" to open the solution
-- Build visual studio project 
+- Use the UnrealEngine to create C++ project
+- Create a "Plugins" folder in your project directory
+- Put these repository files in your Plugins directory
+- Click the project file named "*.uproject" with the right button and choose "Switch UnrealEngine version" to switch the Unreal engine version you want to use
+- Click the project file named "*.uproject" with the right button and choose "Generate visual studio project files"
+- Double-click "projectname.sln" to open the solution
+- Build a visual studio project 
 
 ## Install
 ---
-- Copy the Plugins folder to the root dirctory which project you want to use
+- Copy the Plugins folder to the root directory which project you want to use
 - Restart your project to active the plugin
 
 ## Usage
