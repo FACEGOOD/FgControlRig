@@ -32,10 +32,7 @@ The source code for the plugin is available on this repository for UE5.2.x
 - Restart your project to active the plugin
 
 ## Usage
-
-
-https://github.com/FACEGOOD/FgControlRigLib/assets/11623487/2c9663ba-dd43-4775-bb3a-2bf88dcb4656
-
+https://github.com/FACEGOOD/FgControlRigLib/blob/main/Usage.gif
 
 ## License
 [Apache 2.0](LICENSE)
