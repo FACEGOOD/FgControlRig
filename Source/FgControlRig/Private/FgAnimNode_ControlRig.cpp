@@ -444,7 +444,8 @@ void FFgAnimNode_ControlRig::PropagateInputProperties(const UObject* InSourceIns
 
 			if (versionStatus == "521")
 			{
-				name = *versionChangeMap.Find(name);
+				if(versionChangeMap.Contains(name))
+					name = *versionChangeMap.Find(name);
 			}
 
 			if (FRigControlElement* ControlElement = TargetControlRig->FindControl(FName(*name)))
