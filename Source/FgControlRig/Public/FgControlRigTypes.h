@@ -4,6 +4,11 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "FgControlRigTypes.generated.h"
 
+
+#define UE5_1 1
+#define UE5_2 0
+
+
 USTRUCT(BlueprintType)
 struct FGCONTROLRIG_API FFgContrlRigStruct
 {

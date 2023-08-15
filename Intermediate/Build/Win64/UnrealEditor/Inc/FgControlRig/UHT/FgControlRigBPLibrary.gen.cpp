@@ -7,9 +7,9 @@
 #include "UObject/GeneratedCppIncludes.h"
 #include "FgControlRig/Public/FgControlRigBPLibrary.h"
 #include "FgControlRig/Public/FgControlRigTypes.h"
-#include "Roles/LiveLinkAnimationBlueprintStructs.h"
-#include "Roles/LiveLinkAnimationTypes.h"
-#include "Roles/LiveLinkBasicTypes.h"
+#include "LiveLinkInterface/Public/Roles/LiveLinkAnimationBlueprintStructs.h"
+#include "LiveLinkInterface/Public/Roles/LiveLinkAnimationTypes.h"
+#include "LiveLinkInterface/Public/Roles/LiveLinkBasicTypes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeFgControlRigBPLibrary() {}
 // Cross Module References
@@ -362,15 +362,15 @@ void EmptyLinkFunctionForGeneratedCodeFgControlRigBPLibrary() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UFgControlRigBPLibrary);
 	UFgControlRigBPLibrary::~UFgControlRigBPLibrary() {}
-	struct Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics
+	struct Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UFgControlRigBPLibrary, UFgControlRigBPLibrary::StaticClass, TEXT("UFgControlRigBPLibrary"), &Z_Registration_Info_UClass_UFgControlRigBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFgControlRigBPLibrary), 3810290723U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_610372407(TEXT("/Script/FgControlRig"),
-		Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_610372407(TEXT("/Script/FgControlRig"),
+		Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

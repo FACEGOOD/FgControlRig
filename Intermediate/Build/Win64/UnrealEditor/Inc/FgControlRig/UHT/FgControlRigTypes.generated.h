@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FGCONTROLRIG_FgControlRigTypes_generated_h
 
-#define FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_10_GENERATED_BODY \
+#define FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_15_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FFgContrlRigStruct_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> FGCONTROLRIG_API UScriptStruct* StaticStruct<struct FFgContrlRigStruct>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h
+#define CURRENT_FILE_ID FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

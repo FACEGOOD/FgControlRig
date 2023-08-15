@@ -18,7 +18,7 @@ class UScriptStruct* FFgContrlRigStruct::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_FgContrlRigStruct.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_FgContrlRigStruct.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FFgContrlRigStruct, (UObject*)Z_Construct_UPackage__Script_FgControlRig(), TEXT("FgContrlRigStruct"));
+		Z_Registration_Info_UScriptStruct_FgContrlRigStruct.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FFgContrlRigStruct, Z_Construct_UPackage__Script_FgControlRig(), TEXT("FgContrlRigStruct"));
 	}
 	return Z_Registration_Info_UScriptStruct_FgContrlRigStruct.OuterSingleton;
 }
@@ -2048,15 +2048,15 @@ template<> FGCONTROLRIG_API UScriptStruct* StaticStruct<FFgContrlRigStruct>()
 		}
 		return Z_Registration_Info_UScriptStruct_FgContrlRigStruct.InnerSingleton;
 	}
-	struct Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics
+	struct Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics
 	{
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 	};
-	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics::ScriptStructInfo[] = {
+	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics::ScriptStructInfo[] = {
 		{ FFgContrlRigStruct::StaticStruct, Z_Construct_UScriptStruct_FFgContrlRigStruct_Statics::NewStructOps, TEXT("FgContrlRigStruct"), &Z_Registration_Info_UScriptStruct_FgContrlRigStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FFgContrlRigStruct), 3784592471U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_2459228576(TEXT("/Script/FgControlRig"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_2459228576(TEXT("/Script/FgControlRig"),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SalesDemoCPP_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics::ScriptStructInfo),
+		Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyProject511_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigTypes_h_Statics::ScriptStructInfo),
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

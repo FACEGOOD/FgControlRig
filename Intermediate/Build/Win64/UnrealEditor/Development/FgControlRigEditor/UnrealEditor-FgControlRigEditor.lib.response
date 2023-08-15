@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-FgControlRigEditor.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Projects\MyProject511\Intermediate\Build\Win64\MyProject511Editor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
+"E:\Projects\MyProject511\Plugins\FgControlRig\Intermediate\Build\Win64\UnrealEditor\Development\FgControlRigEditor\Module.FgControlRigEditor.cpp.obj"
+"E:\Projects\MyProject511\Plugins\FgControlRig\Intermediate\Build\Win64\UnrealEditor\Development\FgControlRigEditor\Default.rc2.res"
+/OUT:"E:\Projects\MyProject511\Plugins\FgControlRig\Intermediate\Build\Win64\UnrealEditor\Development\FgControlRigEditor\UnrealEditor-FgControlRigEditor.lib"

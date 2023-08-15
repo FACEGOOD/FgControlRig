@@ -8,6 +8,8 @@
 #include "FgControlRigTypes.h"
 #include "FgAnimNode_ControlRig.generated.h"
 
+
+
 class UNodeMappingContainer;
 
 /**
@@ -41,7 +43,14 @@ struct FGCONTROLRIG_API FFgAnimNode_ControlRig : public FAnimNode_ControlRigBase
 	UPROPERTY(EditAnywhere, Category = Settings, meta = (PinShownByDefault))
 		FFgContrlRigStruct fgControlRigData;
 private:
+#if UE5_2
 	void HandleOnInitialized_AnyThread(URigVMHost*, const FName&);
+#endif // 
+
+#if UE5_1
+	void HandleOnInitialized_AnyThread(UControlRig*, const EControlRigState, const FName&);
+#endif // 
+
 #if WITH_EDITOR
 	virtual void HandleObjectsReinstanced_Impl(UObject* InSourceObject, UObject* InTargetObject, const TMap<UObject*, UObject*>& OldToNewInstanceMap) override;
 #endif

@@ -25,6 +25,8 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "BlueprintEditorModule.h"
 #include "EdGraphSchema_K2_Actions.h"
+#include "FgControlRigTypes.h"
+
 #define LOCTEXT_NAMESPACE "FFgControlRigEditorModule"
 
 void FFgControlRigEditorModule::StartupModule()
@@ -62,8 +64,11 @@ void FFgControlRigEditorModule::OnMenuEntryClicked(FMenuBuilder& MenuBuilder)
 
 	FString PluginBaseDir = FPaths::ProjectPluginsDir();
 	FString PluginResourceDir = FPaths::Combine(*PluginBaseDir, TEXT("FgControlRig/Resources"));
+#if UE5_2
 	FString ResourceFileV1 = FPaths::Combine(*PluginResourceDir, TEXT("520"));
-	
+#elif UE5_1
+	FString ResourceFileV1 = FPaths::Combine(*PluginResourceDir, TEXT("51"));
+#endif
 	// Create the Submenu Entries
 	MenuBuilder.AddMenuEntry(
 		FText::FromString("MetaHuman"),

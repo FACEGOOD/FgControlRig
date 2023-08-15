@@ -47,10 +47,19 @@ FFgAnimNode_ControlRig::~FFgAnimNode_ControlRig()
 	}
 }
 
+#if UE5_2
 void FFgAnimNode_ControlRig::HandleOnInitialized_AnyThread(URigVMHost*, const FName&)
 {
 	RefPoseSetterHash.Reset();
 }
+#endif
+
+#if UE5_1
+void FFgAnimNode_ControlRig::HandleOnInitialized_AnyThread(UControlRig*, const EControlRigState, const FName&)
+{
+	RefPoseSetterHash.Reset();
+}
+#endif
 
 void FFgAnimNode_ControlRig::OnInitializeAnimInstance(const FAnimInstanceProxy* InProxy, const UAnimInstance* InAnimInstance)
 {
