@@ -3,17 +3,37 @@
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "FgControlRig",
-	"Description": "",
-	"Category": "Other",
-	"CreatedBy": "",
-	"CreatedByURL": "",
-	"DocsURL": "",
+	"Description": "A Plugin for drive metahuman model realtime from FaceGood",
+	"Category": "FaceGood",
+	"CreatedBy": "FaceGood, Inc.",
+	"CreatedByURL": "http://Avatary.com",
+	"DocsURL": "https://avatary.yuque.com/org-wiki-avatary-uhm530/lrgwqg/dyinmiqb2wekgcy2",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "http://Avatary.com",
+	"EngineVersion": "5.4.0",
 	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false,
+	"Installed": true,
+	"SupportedTargetPlatforms": [
+		"Win64"
+	],
+	"Modules": [
+		{
+			"Name": "FgControlRig",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "FgControlRigEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ControlRig",
@@ -22,18 +42,6 @@
 		{
 			"Name": "LiveLink",
 			"Enabled": true
-		}
-	],
-	"Modules": [
-		{
-			"Name": "FgControlRig",
-			"Type": "Runtime",
-			"LoadingPhase": "PreDefault"
-		},
-		{
-			"Name": "FgControlRigEditor",
-			"Type": "Editor",
-			"LoadingPhase": "Default"
 		}
 	]
 }

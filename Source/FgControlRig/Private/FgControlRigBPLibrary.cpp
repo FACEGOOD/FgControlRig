@@ -1,6 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-// Copyright Epic Games, Inc. All Rights Reserved.
-
+// Copyright 2023 FACEGOOD, Inc. All Rights Reserved.
 #include "FgControlRigBPLibrary.h"
 #include "FgControlRig.h"
 #include "UObject/UnrealType.h"
@@ -9,7 +7,6 @@
 
 TArray<FName> fg_float_names;
 TArray<int> fg_floatNameValueIdx;
-//TArray<FName> fg_vector_names;
 TArray<int> fg_vectorNameValueIdx;
 TMap< FName, TArray<int>> fg_vector_names;
 
@@ -66,16 +63,13 @@ void UFgControlRigBPLibrary::FgParsingLiveLinkData(const FLiveLinkAnimationFrame
 {
 	auto datas = data.PropertyValues;
 
-	//if (datas.Num() < fg_vector_names.Num() * 2 + fg_float_names.Num())
-	//	return;
 
 	for (auto n : fg_vector_names)
 	{
 		controlRig.set_editor_property(n.Key, FVector2d(datas[n.Value[0]], datas[n.Value[1]]));
 	}
 
-	//for (int n = 0; n < fg_vector_names.Num(); ++n)
-	//	gControlRig.set_editor_property(fg_vector_names[n], FVector2d(datas[fg_vectorNameValueIdx[2 * n]], datas[fg_vectorNameValueIdx[2 * n + 1]]));
+
 	for (int n = 0; n < fg_float_names.Num(); ++n)
 		controlRig.set_editor_property(fg_float_names[n], datas[fg_floatNameValueIdx[n]]);
 }
@@ -139,16 +133,7 @@ void UFgControlRigBPLibrary::FgGetContrlRigDataAnim(const FSubjectFrameHandle& d
 void UFgControlRigBPLibrary::FgGetContrlRigDataBasic(const FLiveLinkBasicBlueprintData&data, FFgContrlRigStruct& controlRig)
 {
 	
-	/** Specialization of our wrapped struct for FLiveLinkBaseStaticData */
-	//using FLiveLinkStaticDataStruct = FLiveLinkBaseDataStruct<FLiveLinkBaseStaticData>;
 
-	/** Specialization of our wrapped struct for FLiveLinkBaseFrameData */
-	//using FLiveLinkFrameDataStruct = FLiveLinkBaseDataStruct<FLiveLinkBaseFrameData>;
-
-	/** Specialization of our wrapped struct for FLiveLinkBaseBlueprintData */
-	//using FLiveLinkBlueprintDataStruct = FLiveLinkBaseDataStruct<FLiveLinkBaseBlueprintData>;
-
-	
 	auto staticData = data.StaticData;
 	auto frameData = data.FrameData;
 

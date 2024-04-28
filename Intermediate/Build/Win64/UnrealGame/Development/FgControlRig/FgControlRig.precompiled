@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Development\\FgControlRig\\Module.FgControlRig.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\FgControlRig\\FgAnimNode_ControlRig.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\FgControlRig\\FgControlRig.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\FgControlRig\\FgControlRigBPLibrary.cpp.obj"
+	]
+}

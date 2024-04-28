@@ -1,5 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
+// Copyright 2023 FACEGOOD, Inc. All Rights Reserved.
 #include "FgControlRig.h"
 
 #define LOCTEXT_NAMESPACE "FFgControlRigModule"

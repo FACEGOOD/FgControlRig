@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeFgControlRigEditor_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0x0A4E9F90,
-				0x2450F36C,
-				METADATA_PARAMS(nullptr, 0)
+				0xF548A235,
+				0x1F59B4AA,
+				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_FgControlRigEditor.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_FgControlRigEditor.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_FgControlRigEditor(Z_Construct_UPackage__Script_FgControlRigEditor, TEXT("/Script/FgControlRigEditor"), Z_Registration_Info_UPackage__Script_FgControlRigEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x0A4E9F90, 0x2450F36C));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_FgControlRigEditor(Z_Construct_UPackage__Script_FgControlRigEditor, TEXT("/Script/FgControlRigEditor"), Z_Registration_Info_UPackage__Script_FgControlRigEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF548A235, 0x1F59B4AA));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
