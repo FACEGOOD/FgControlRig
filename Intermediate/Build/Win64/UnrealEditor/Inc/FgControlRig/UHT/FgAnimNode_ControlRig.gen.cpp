@@ -36,9 +36,13 @@ struct Z_Construct_UScriptStruct_FFgAnimNode_ControlRig_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * Animation node that allows animation ControlRig output to be used in an animation graph\n */" },
+#endif
 		{ "ModuleRelativePath", "Public/FgAnimNode_ControlRig.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Animation node that allows animation ControlRig output to be used in an animation graph" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_fgControlRigData_MetaData[] = {
 		{ "Category", "Settings" },
@@ -83,15 +87,15 @@ UScriptStruct* Z_Construct_UScriptStruct_FFgAnimNode_ControlRig()
 // End ScriptStruct FFgAnimNode_ControlRig
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_Statics
+struct Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FFgAnimNode_ControlRig::StaticStruct, Z_Construct_UScriptStruct_FFgAnimNode_ControlRig_Statics::NewStructOps, TEXT("FgAnimNode_ControlRig"), &Z_Registration_Info_UScriptStruct_FgAnimNode_ControlRig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FFgAnimNode_ControlRig), 1642505191U) },
+		{ FFgAnimNode_ControlRig::StaticStruct, Z_Construct_UScriptStruct_FFgAnimNode_ControlRig_Statics::NewStructOps, TEXT("FgAnimNode_ControlRig"), &Z_Registration_Info_UScriptStruct_FgAnimNode_ControlRig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FFgAnimNode_ControlRig), 3073524984U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_2961779710(TEXT("/Script/FgControlRig"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_3538903672(TEXT("/Script/FgControlRig"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FgControlRigEditor.cpp.obj": [
+			"FgControlRigEditor.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"FgAnimGraphNode_ControlRig.cpp.obj",
+			"FgControlRigEditor.cpp.obj",
+			"SVariableMappingWidget.cpp.obj"
+		]
+	}
+}

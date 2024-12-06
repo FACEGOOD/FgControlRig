@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrigeditor\\module.fgcontrolrigeditor.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ueproject\\fgueproject\\intermediate\\build\\win64\\x64\\fgueprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrigeditor\\definitions.fgcontrolrigeditor.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\unrealeditor\\inc\\fgcontrolrigeditor\\uht\\fgcontrolrigeditor.init.gen.cpp",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrigeditor\\permoduleinline.gen.cpp",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

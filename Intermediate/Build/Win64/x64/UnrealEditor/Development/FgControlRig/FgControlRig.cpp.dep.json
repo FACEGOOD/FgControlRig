@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\source\\fgcontrolrig\\private\\fgcontrolrig.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ueproject\\fgueproject\\intermediate\\build\\win64\\x64\\fgueprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrig\\definitions.fgcontrolrig.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\source\\fgcontrolrig\\public\\fgcontrolrig.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-FgControlRig.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\UEProject\FGUEPROJECT\Intermediate\Build\Win64\x64\FGUEPROJECTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"E:\UEProject\FGUEPROJECT\Plugins\FgControlRig\Intermediate\Build\Win64\x64\UnrealEditor\Development\FgControlRig\Module.FgControlRig.cpp.obj"
+"E:\UEProject\FGUEPROJECT\Plugins\FgControlRig\Intermediate\Build\Win64\x64\UnrealEditor\Development\FgControlRig\FgAnimNode_ControlRig.cpp.obj"
+"E:\UEProject\FGUEPROJECT\Plugins\FgControlRig\Intermediate\Build\Win64\x64\UnrealEditor\Development\FgControlRig\FgControlRig.cpp.obj"
+"E:\UEProject\FGUEPROJECT\Plugins\FgControlRig\Intermediate\Build\Win64\x64\UnrealEditor\Development\FgControlRig\FgControlRigBPLibrary.cpp.obj"
+"E:\UEProject\FGUEPROJECT\Plugins\FgControlRig\Intermediate\Build\Win64\x64\UnrealEditor\Development\FgControlRig\Default.rc2.res"
+/OUT:"E:\UEProject\FGUEPROJECT\Plugins\FgControlRig\Intermediate\Build\Win64\x64\UnrealEditor\Development\FgControlRig\UnrealEditor-FgControlRig.lib"

@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\source\\fgcontrolrigeditor\\private\\svariablemappingwidget.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ueproject\\fgueproject\\intermediate\\build\\win64\\x64\\fgueprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrigeditor\\definitions.fgcontrolrigeditor.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\source\\fgcontrolrigeditor\\private\\svariablemappingwidget.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\developer\\toolwidgets\\public\\ssearchablecombobox.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\input\\ssearchbox.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\text\\sinlineeditabletextblock.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

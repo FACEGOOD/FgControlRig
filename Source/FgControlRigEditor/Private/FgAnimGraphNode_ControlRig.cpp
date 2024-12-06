@@ -12,6 +12,7 @@
 #include "AnimationGraphSchema.h"
 #include "RigVMBlueprintGeneratedClass.h"
 #include "ControlRigBlueprint.h"
+#include "ControlRigObjectBinding.h"
 #include "Misc/DefaultValueHelper.h"
 #include "Misc/AssertionMacros.h"
 #include "UObject/Class.h"
@@ -395,23 +396,51 @@ bool UFgAnimGraphNode_ControlRig::IsInputProperty(const FName& PropertyName) con
 	return InputVariables.Contains(PropertyName) || !OutputVariables.Contains(PropertyName);
 }
 
-FRigControlElement* UFgAnimGraphNode_ControlRig::FindControlElement(const FName& InControlName) const
+UFgAnimGraphNode_ControlRig::FControlsInfo* UFgAnimGraphNode_ControlRig::FindControlElement(const FName& InControlName) const
 {
-	if(const UClass* ControlRigClass = GetTargetClass())
-	{
-		if(UControlRig* CDO = ControlRigClass->GetDefaultObject<UControlRig>())
+	TArray<FControlsInfo>& Controls = GetControls();
+	return Controls.FindByPredicate([InControlName](const FControlsInfo& Info)
 		{
-			if(const URigHierarchy* Hierarchy = CDO->GetHierarchy())
-			{
-				return (FRigControlElement*)Hierarchy->Find<FRigControlElement>(FRigElementKey(InControlName, ERigElementType::Control));
-			}
-		}
-	}
-	return nullptr;
+			return Info.Name == InControlName;
+		});
 }
+
+
+//FRigControlElement* UFgAnimGraphNode_ControlRig::FindControlElement(const FName& InControlName) const
+//{
+//	if(const UClass* ControlRigClass = GetTargetClass())
+//	{
+//		if(UControlRig* CDO = ControlRigClass->GetDefaultObject<UControlRig>())
+//		{
+//			if(const URigHierarchy* Hierarchy = CDO->GetHierarchy())
+//			{
+//				return (FRigControlElement*)Hierarchy->Find<FRigControlElement>(FRigElementKey(InControlName, ERigElementType::Control));
+//			}
+//		}
+//	}
+//	return nullptr;
+//}
 
 bool UFgAnimGraphNode_ControlRig::IsAvailableToMapToCurve(const FName& PropertyName, bool bInput) const
 {
+	//DECLARE_SCOPE_HIERARCHICAL_COUNTER_FUNC()
+
+	//// find if input or output
+	//// ensure it could convert to float
+	//const FRigVMExternalVariable* Variable = (bInput) ? InputVariables.Find(PropertyName) : OutputVariables.Find(PropertyName);
+	//if (Variable)
+	//{
+	//	return Variable->TypeName == TEXT("float");
+	//}
+
+	//if(const FRigControlElement* ControlElement = FindControlElement(PropertyName))
+	//{
+	//	return ControlElement->Settings.ControlType == ERigControlType::Float;
+	//}
+
+	//return ensure(false);
+
+
 	DECLARE_SCOPE_HIERARCHICAL_COUNTER_FUNC()
 
 	// find if input or output
@@ -422,9 +451,9 @@ bool UFgAnimGraphNode_ControlRig::IsAvailableToMapToCurve(const FName& PropertyN
 		return Variable->TypeName == TEXT("float");
 	}
 
-	if(const FRigControlElement* ControlElement = FindControlElement(PropertyName))
+	if (const FControlsInfo* ControlInfo = FindControlElement(PropertyName))
 	{
-		return ControlElement->Settings.ControlType == ERigControlType::Float;
+		return (ControlInfo->ControlType == ERigControlType::Float || ControlInfo->ControlType == ERigControlType::ScaleFloat);
 	}
 
 	return ensure(false);
@@ -567,6 +596,59 @@ void UFgAnimGraphNode_ControlRig::CustomizeDetails(IDetailLayoutBuilder& DetailB
 	// alpha property blending support END
 }
 
+//TArray<FControlsInfo>& UFgAnimGraphNode_ControlRig::GetControls() const
+TArray<UFgAnimGraphNode_ControlRig::FControlsInfo>& UFgAnimGraphNode_ControlRig::GetControls() const
+{
+	const UClass* ControlRigClass = GetTargetClass();
+
+	if (ControlsInfoClass != ControlRigClass)
+	{
+		ControlsInfo.Reset();
+		ControlsInfoClass = ControlRigClass;
+
+		if (ControlRigClass)
+		{
+			if (USkeleton* Skeleton = GetAnimBlueprint()->TargetSkeleton)
+			{
+				UControlRig* TemplateRig = NewObject<UControlRig>(GetTransientPackage(), ControlRigClass, NAME_None, RF_Transient);
+				TemplateRig->SetObjectBinding(MakeShared<FControlRigObjectBinding>());
+				TemplateRig->GetObjectBinding()->BindToObject(Skeleton);
+				TemplateRig->GetDataSourceRegistry()->RegisterDataSource(UControlRig::OwnerComponent, TemplateRig->GetObjectBinding()->GetBoundObject());
+
+				TemplateRig->Initialize();
+				TemplateRig->SetBoneInitialTransformsFromRefSkeleton(Skeleton->GetReferenceSkeleton());
+				{
+					// Empty event queue to evaluate only construction
+					TGuardValue<TArray<FName>> EventQueueGuard(TemplateRig->EventQueue, {});
+					TemplateRig->Evaluate_AnyThread();
+				}
+
+				if (const URigHierarchy* Hierarchy = TemplateRig->GetHierarchy())
+				{
+					Hierarchy->ForEach<FRigControlElement>([&](FRigControlElement* ControlElement) -> bool
+						{
+							if (Hierarchy->IsAnimatable(ControlElement))
+							{
+								FControlsInfo Info;
+								Info.Name = ControlElement->GetFName();
+								Info.DisplayName = ControlElement->GetName();
+								Info.PinType = TemplateRig->GetHierarchy()->GetControlPinType(ControlElement);
+								Info.ControlType = ControlElement->Settings.ControlType;
+								Info.DefaultValue = TemplateRig->GetHierarchy()->GetControlPinDefaultValue(ControlElement, true);
+								ControlsInfo.Add(Info);
+							}
+							return true;
+						});
+				}
+
+				TemplateRig->MarkAsGarbage();
+			}
+		}
+	}
+
+	return ControlsInfo;
+}
+
 void UFgAnimGraphNode_ControlRig::GetVariables(bool bInput, TMap<FName, FRigVMExternalVariable>& OutVariables) const
 {
 	DECLARE_SCOPE_HIERARCHICAL_COUNTER_FUNC()
@@ -624,26 +706,13 @@ void UFgAnimGraphNode_ControlRig::GetAvailableMapping(const FName& PathName, TAr
 	OutArray.Reset();
 	if (TargetSkeleton)
 	{
-		const FSmartNameMapping* CurveMapping = TargetSkeleton->GetSmartNameContainer(USkeleton::AnimCurveMappingName);
-		CurveMapping->FillNameArray(OutArray);
-		
+		TargetSkeleton->GetCurveMetaDataNames(OutArray);
+
 		// also add all controls
-		if(const UClass* ControlRigClass = GetTargetClass())
+		TArray<FControlsInfo>& Controls = GetControls();
+		for (FControlsInfo& ControlInfo : Controls)
 		{
-			if(UControlRig* CDO = ControlRigClass->GetDefaultObject<UControlRig>())
-			{
-				if(const URigHierarchy* Hierarchy = CDO->GetHierarchy())
-				{
-					Hierarchy->ForEach<FRigControlElement>([&](FRigControlElement* ControlElement) -> bool
-					{
-						if (Hierarchy->IsAnimatable(ControlElement))
-						{
-							OutArray.Add(*ControlElement->GetName());
-						}
-						return true;
-					});
-				}
-			}
+			OutArray.Add(ControlInfo.Name);
 		}
 
 		// we want to exclude anything that has been mapped already
@@ -661,13 +730,15 @@ void UFgAnimGraphNode_ControlRig::GetAvailableMapping(const FName& PathName, TAr
 				OutArray.RemoveAt(Index);
 				--Index;
 			}
-			else if (OutputMapping.Contains(Item))
+			else if (OutputMapping.Contains(Item)) 
 			{
 				OutArray.RemoveAt(Index);
 				--Index;
 			}
 		}
 	}
+
+	
 }
 
 void UFgAnimGraphNode_ControlRig::CreateVariableMapping(const FString& FilteredText, TArray< TSharedPtr<FVariableMappingInfo> >& OutArray, bool bInput)
