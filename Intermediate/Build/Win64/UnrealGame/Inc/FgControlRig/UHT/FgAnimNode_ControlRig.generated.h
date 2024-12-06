@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FGCONTROLRIG_FgAnimNode_ControlRig_generated_h
 
-#define FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_22_GENERATED_BODY \
+#define FID_work_UE_Plugins_ControlRigTest_pluginPacks_FgControlRig_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h_22_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FFgAnimNode_ControlRig_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FAnimNode_ControlRig Super;
@@ -23,7 +23,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> FGCONTROLRIG_API UScriptStruct* StaticStruct<struct FFgAnimNode_ControlRig>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h
+#define CURRENT_FILE_ID FID_work_UE_Plugins_ControlRigTest_pluginPacks_FgControlRig_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgAnimNode_ControlRig_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -298,10 +298,14 @@ struct Z_Construct_UClass_UFgControlRigBPLibrary_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n*\x09""Function library class.\n*\x09""Each function in it is expected to be static and represents blueprint node that can be called in any blueprint.\n*\n*\x09When declaring function you can define metadata for the node. Key function specifiers will be BlueprintPure and BlueprintCallable.\n*\x09""BlueprintPure - means the function does not affect the owning object in any way and thus creates a node without Exec pins.\n*\x09""BlueprintCallable - makes a function which can be executed in Blueprints - Thus it has Exec pins.\n*\x09""DisplayName - full name of the node, shown when you mouse over the node and in the blueprint drop down menu.\n*\x09\x09\x09\x09Its lets you name the node using characters not allowed in C++ function names.\n*\x09""CompactNodeTitle - the word(s) that appear on the node.\n*\x09Keywords -\x09the list of keywords that helps you to find node when you search for it using Blueprint drop-down menu.\n*\x09\x09\x09\x09Good example is \"Print String\" node which you can find also by using keyword \"log\".\n*\x09""Category -\x09the category your node will be under in the Blueprint drop-down menu.\n*\n*\x09""For more info on custom blueprint nodes visit documentation:\n*\x09https://wiki.unrealengine.com/Custom_Blueprint_Node_Creation\n*/" },
+#endif
 		{ "IncludePath", "FgControlRigBPLibrary.h" },
 		{ "ModuleRelativePath", "Public/FgControlRigBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "*      Function library class.\n*      Each function in it is expected to be static and represents blueprint node that can be called in any blueprint.\n*\n*      When declaring function you can define metadata for the node. Key function specifiers will be BlueprintPure and BlueprintCallable.\n*      BlueprintPure - means the function does not affect the owning object in any way and thus creates a node without Exec pins.\n*      BlueprintCallable - makes a function which can be executed in Blueprints - Thus it has Exec pins.\n*      DisplayName - full name of the node, shown when you mouse over the node and in the blueprint drop down menu.\n*                              Its lets you name the node using characters not allowed in C++ function names.\n*      CompactNodeTitle - the word(s) that appear on the node.\n*      Keywords -      the list of keywords that helps you to find node when you search for it using Blueprint drop-down menu.\n*                              Good example is \"Print String\" node which you can find also by using keyword \"log\".\n*      Category -      the category your node will be under in the Blueprint drop-down menu.\n*\n*      For more info on custom blueprint nodes visit documentation:\n*      https://wiki.unrealengine.com/Custom_Blueprint_Node_Creation" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -355,14 +359,14 @@ UFgControlRigBPLibrary::~UFgControlRigBPLibrary() {}
 // End Class UFgControlRigBPLibrary
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics
+struct Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFgControlRigBPLibrary, UFgControlRigBPLibrary::StaticClass, TEXT("UFgControlRigBPLibrary"), &Z_Registration_Info_UClass_UFgControlRigBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFgControlRigBPLibrary), 398077979U) },
+		{ Z_Construct_UClass_UFgControlRigBPLibrary, UFgControlRigBPLibrary::StaticClass, TEXT("UFgControlRigBPLibrary"), &Z_Registration_Info_UClass_UFgControlRigBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFgControlRigBPLibrary), 1223122901U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_3342731009(TEXT("/Script/FgControlRig"),
-	Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_3848751718(TEXT("/Script/FgControlRig"),
+	Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRig_Public_FgControlRigBPLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

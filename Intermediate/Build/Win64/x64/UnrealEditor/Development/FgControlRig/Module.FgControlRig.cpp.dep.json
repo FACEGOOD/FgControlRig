@@ -1,0 +1,38 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrig\\module.fgcontrolrig.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ueproject\\fgueproject\\intermediate\\build\\win64\\x64\\fgueprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrig\\definitions.fgcontrolrig.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\unrealeditor\\inc\\fgcontrolrig\\uht\\fgcontrolrig.init.gen.cpp",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\unrealeditor\\inc\\fgcontrolrig\\uht\\fgcontrolrigbplibrary.gen.cpp",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\source\\fgcontrolrig\\public\\fgcontrolrigbplibrary.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\roles\\livelinkbasictypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\livelinktypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\livelinkrefskeleton.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinkrefskeleton.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinktypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinkbasictypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\roles\\livelinkanimationtypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinkanimationtypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\roles\\livelinkanimationblueprintstructs.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\ilivelinksource.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\livelinksourcesettings.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\livelinkinterface\\public\\livelinksourcefactory.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinksourcefactory.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinksourcesettings.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\ilivelinksource.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\livelinkinterface\\uht\\livelinkanimationblueprintstructs.generated.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\source\\fgcontrolrig\\public\\fgcontrolrigtypes.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\unrealeditor\\inc\\fgcontrolrig\\uht\\fgcontrolrigtypes.generated.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\unrealeditor\\inc\\fgcontrolrig\\uht\\fgcontrolrigbplibrary.generated.h",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\unrealeditor\\inc\\fgcontrolrig\\uht\\fgcontrolrigtypes.gen.cpp",
+            "e:\\ueproject\\fgueproject\\plugins\\fgcontrolrig\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\fgcontrolrig\\permoduleinline.gen.cpp",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

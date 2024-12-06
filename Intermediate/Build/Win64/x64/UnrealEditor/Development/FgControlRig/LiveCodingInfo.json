@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FgControlRig.cpp.obj": [
+			"FgControlRig.init.gen.cpp.obj",
+			"FgControlRigBPLibrary.gen.cpp.obj",
+			"FgControlRigTypes.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"FgAnimNode_ControlRig.cpp.obj",
+			"FgControlRig.cpp.obj",
+			"FgControlRigBPLibrary.cpp.obj"
+		]
+	}
+}

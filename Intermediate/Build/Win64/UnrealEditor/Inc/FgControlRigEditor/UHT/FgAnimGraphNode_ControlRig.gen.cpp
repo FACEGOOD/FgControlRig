@@ -31,8 +31,14 @@ struct Z_Construct_UClass_UFgAnimGraphNode_ControlRig_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//struct FRigVMVariableMappingInfo;\n" },
+#endif
 		{ "IncludePath", "FgAnimGraphNode_ControlRig.h" },
 		{ "ModuleRelativePath", "Public/FgAnimGraphNode_ControlRig.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "struct FRigVMVariableMappingInfo;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Node_MetaData[] = {
 		{ "Category", "Settings" },
@@ -47,7 +53,7 @@ struct Z_Construct_UClass_UFgAnimGraphNode_ControlRig_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UFgAnimGraphNode_ControlRig_Statics::NewProp_Node = { "Node", nullptr, (EPropertyFlags)0x0010008000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFgAnimGraphNode_ControlRig, Node), Z_Construct_UScriptStruct_FFgAnimNode_ControlRig, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Node_MetaData), NewProp_Node_MetaData) }; // 1642505191
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UFgAnimGraphNode_ControlRig_Statics::NewProp_Node = { "Node", nullptr, (EPropertyFlags)0x0010008000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFgAnimGraphNode_ControlRig, Node), Z_Construct_UScriptStruct_FFgAnimNode_ControlRig, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Node_MetaData), NewProp_Node_MetaData) }; // 3073524984
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UFgAnimGraphNode_ControlRig_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFgAnimGraphNode_ControlRig_Statics::NewProp_Node,
 };
@@ -89,14 +95,14 @@ UFgAnimGraphNode_ControlRig::~UFgAnimGraphNode_ControlRig() {}
 // End Class UFgAnimGraphNode_ControlRig
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_Statics
+struct Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFgAnimGraphNode_ControlRig, UFgAnimGraphNode_ControlRig::StaticClass, TEXT("UFgAnimGraphNode_ControlRig"), &Z_Registration_Info_UClass_UFgAnimGraphNode_ControlRig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFgAnimGraphNode_ControlRig), 3333314670U) },
+		{ Z_Construct_UClass_UFgAnimGraphNode_ControlRig, UFgAnimGraphNode_ControlRig::StaticClass, TEXT("UFgAnimGraphNode_ControlRig"), &Z_Registration_Info_UClass_UFgAnimGraphNode_ControlRig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFgAnimGraphNode_ControlRig), 1833079736U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_409127056(TEXT("/Script/FgControlRigEditor"),
-	Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_3891236862(TEXT("/Script/FgControlRigEditor"),
+	Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FGUEPROJECT_Plugins_FgControlRig_Source_FgControlRigEditor_Public_FgAnimGraphNode_ControlRig_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

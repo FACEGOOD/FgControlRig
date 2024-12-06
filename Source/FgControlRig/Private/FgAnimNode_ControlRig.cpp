@@ -101,7 +101,7 @@ void FFgAnimNode_ControlRig::PropagateInputProperties(const UObject* InSourceIns
 				default:
 				{
 					break;
-					checkNoEntry();
+					// checkNoEntry();
 				}
 				}
 
